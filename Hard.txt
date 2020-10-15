@@ -1,0 +1,85 @@
+@@@@Profile
+login/failed_user_auto_unlock = 0
+login/fails_to_session_end = 3
+login/fails_to_user_lock = 5
+login/min_password_digits = 1
+login/min_password_letters = 1
+login/min_password_lng = 8
+login/min_password_lowercase = 0
+login/min_password_specials = 1
+login/min_password_uppercase = 0
+login/password_downwards_compatibility = 0
+login/password_change_for_SSO = 0
+login/password_expiration_time = 30
+login/password_history_size = 12
+login/password_max_idle_initial = 7
+login/min_password_diff = 1
+login/disable_multi_gui_login = 1
+login/password_max_idle_productive = 90
+rdisp/gui_auto_logout = 1800
+rec/client = ALL
+auth/object_disabling_active = N
+auth/rfc_authority_check = 1
+auth/tcodes_not_checked = 0
+rsau/enable = 1
+rsau/log_peer_address = 1
+rsau/integrity = 1
+rsau/max_diskspace/local = 100000000
+rsau/selection_slots = 10
+rsau/user_selection = 1
+CHECK_PASSWORD_BLACKLIST = 1
+MIN_PASSWORD_LENGTH = 15
+login/ticket_only_by_https = 1
+snc/data_protection/min = 2
+snc/force_login_screen = 0
+snc/only_encrypted_gui = 0
+login/password_logon_usergroup = Need to add new parameter
+snc/accept_insecure_gui = 1
+snc/log_unencrypted_rfc = NA
+rfc/selftrust = 0
+ccl/snc/server_protocol = 2010_1_1
+ccl/snc/client_protocol = 2010_1_1
+ccl/snc/server_cipher_suites = HIGH
+ccl/snc/client_cipher_suites = HIGH
+ccl/snc/server_accepted_signature_algorithms = SHA256_DSA:PKCS_BT_01_SHA256_RSA:PKCS_BT_01_SHA512_RSA:SHA256_ECDSA:SHA512_ECDSA:SHA384_ECDSA
+ccl/snc/client_accepted_signature_algorithms = SHA256_DSA:PKCS_BT_01_SHA256_RSA:PKCS_BT_01_SHA512_RSA:SHA256_ECDSA:SHA512_ECDSA:SHA384_ECDSA
+snc/log_unencrypted_rfc = 2
+csi/enable = 1
+csi/SAP/csa_lib = $(DIR_EXECUTABLE)$(DIR_SEP)$(FT_DLL_PREFIX)sapcsa$(FT_DLL)
+icm/HTTPS/forward_ccert_as_header = TRUE
+is/HTTP/show_detailed_errors = FALSE
+is/HTTP/show_server_header = FALSE
+icm/trace_secured_data = FALSE
+icm/accept_remote_trace_level = FALSE
+ssl/ciphersuites = 903:PFS:HIGH:+eAES128:+kRSA:!aNULL:!eNULL:!eRC2:!eRC4:!eDES:!e3DES:!eAES_CBC:!mMD5:!mSHA1:TLS_FALLBACK_SCSV::EC_X25519:EC_HIGH:+EC_OPT
+ssl/client_ciphersuites = 918:PFS:HIGH:+eAES128:+kRSA:!aNULL:!eNULL:!eRC2:!eRC4:!eDES:!e3DES:!eAES_CBC:!mMD5:!mSHA1::EC_X25519:EC_HIGH:+EC_OPT
+icm/HTTP/logging_0 = PREFIX=/,LOGFILE=access_log-%d,SWITCHTF=day,LOGFORMAT=SAPSMD,FILEWRAP=on
+icm/server_port_0 = PROT=HTTPS,PORT=89$$, SSLCONFIG=ssl_config_0
+icm/HTTP/admin_0 = PREFIX=/sap/admin,DOCROOT=$(DIR_ICMAN_ROOT)/admin,AUTHFILE=none, PORT=89$$
+icm/HTTPS/verify_client = 0
+icm/ssl_config_0 = CRED=<Path of the SSL server certificate,Ex:- $(DIR_INSTANCE)/sec/SSLS_<HOST_CN>.pse >, CIPHERS=903:PFS:HIGH:+eAES128:+kRSA:!aNULL:!eNULL:!eRC2:!eRC4:!eDES:!e3DES:!eAES_CBC:!mMD5:!mSHA1:TLS_FALLBACK_SCSV::EC_X25519:EC_HIGH:+EC_OPT
+icm/HTTP/auth_0 = PREFIX=/sap/admin,PERMFILE=$(DIR_PROFILE)/icmperm.txt,AUTHFILE=$(DIR_PROFILE)/icmauth.txt,FILTER=SAP
+icm/security_log = LOGFILE=icm_sec_log-%d,LEVEL=3,SWITCHTF=day,FILEWRAP=on
+icm/HTTP/mod_0  = PREFIX=/,FILE=$(DIR_PROFILE)/icm_filter_rules.txt
+
+@@@@Oracle
+os_roles = FALSE
+remote_os_roles = FALSE
+sec_max_failed_login_attempts = Must be set to 5
+Password Complexity Verification Function = can set to any of in the comment
+audit_trail = XML or XML EXTENDED
+audit_file_dest = <new File_System>10GB
+audit_sys_operations = TRUE
+compatible = Equal to DB Version
+sql92_security =  FALSE in 12.1 Default True in 12.2
+O7_DICTIONARY_ACCESSIBILITY = Must be false depricate since 12.2
+max_enabled_roles = 148 from 12.2 parameter is removed
+utl_file_dir =  NULL from 12.2 parameter is depricated
+sec_return_server_release_banner =  FALSE
+open_links = must be set to 0recyclebin = OFF
+max_dump_file_size = 20000
+
+@@@@Hana
+
+@@@@Hostagent
+Hostagent related

@@ -1,0 +1,88 @@
+Profile
+Parameter^ Recommended^ DEF^ INST
+login/failed_user_auto_unlock^ 0 ^ 0^N/A
+login/fails_to_session_end^ 3 ^N/A^N/A
+login/fails_to_user_lock^ 5 ^ 5^N/A
+login/min_password_digits^ 1 ^ 1^N/A
+login/min_password_letters^ 1 ^ 1^N/A
+login/min_password_lng^ 8 ^ 10^ 10
+login/min_password_lowercase^ 0 ^N/A^N/A
+login/min_password_specials^ 1 ^N/A^ 1
+login/min_password_uppercase^ 0 ^N/A^N/A
+login/password_downwards_compatibility^ 0 ^N/A^ 0
+login/password_change_for_SSO^ 0 ^ 1^ 0
+login/password_expiration_time^ 30 ^ 30^ 90
+login/password_history_size^ 12 ^N/A^ 12
+login/password_max_idle_initial^ 7 ^N/A^ 7
+login/min_password_diff^ 1 ^ 1^N/A
+login/disable_multi_gui_login^ 1 ^ 1^N/A
+login/password_max_idle_productive^ 90 ^N/A^ 180
+rdisp/gui_auto_logout^ 1800 ^ 1800^N/A
+rec/client^ ALL ^N/A^ ALL
+auth/object_disabling_active^ N ^ N^N/A
+auth/rfc_authority_check^ 1 ^ 1^N/A
+auth/tcodes_not_checked^ 0 ^ 0^N/A
+rsau/enable^ 1 ^ 1^N/A
+rsau/log_peer_address^ 1 ^N/A^ 1
+rsau/integrity^ 1 ^N/A^ 1
+rsau/max_diskspace/local^ 100000000 ^ 100M^ 104857600
+rsau/selection_slots^ 10 ^ 10^N/A
+rsau/user_selection^ 1 ^ 1^N/A
+CHECK_PASSWORD_BLACKLIST^ 1 ^N/A^N/A
+MIN_PASSWORD_LENGTH^ 15 ^N/A^N/A
+login/ticket_only_by_https =^ 1 ^N/A^N/A
+snc/data_protection/min^ 2 ^ 3^N/A
+snc/force_login_screen^ 0 ^N/A^N/A
+snc/only_encrypted_gui^ 0 ^N/A^N/A
+login/password_logon_usergroup^ Need to add new parameter ^ EXTERN^N/A
+snc/accept_insecure_gui^ 1 ^ U^N/A
+snc/log_unencrypted_rfc^ NA ^ 2^N/A
+rfc/selftrust^ 0 ^N/A^N/A
+ccl/snc/server_protocol^ 2010_1_1 ^N/A^N/A
+ccl/snc/client_protocol^ 2010_1_1 ^N/A^N/A
+ccl/snc/server_cipher_suites^ HIGH ^N/A^N/A
+ccl/snc/client_cipher_suites^ HIGH ^N/A^N/A
+ccl/snc/server_accepted_signature_algorithms^ SHA256_DSA:PKCS_BT_01_SHA256_RSA:PKCS_BT_01_SHA512_RSA:SHA256_ECDSA:SHA512_ECDSA:SHA384_ECDSA ^N/A^N/A
+ccl/snc/client_accepted_signature_algorithms^ SHA256_DSA:PKCS_BT_01_SHA256_RSA:PKCS_BT_01_SHA512_RSA:SHA256_ECDSA:SHA512_ECDSA:SHA384_ECDSA ^N/A^N/A
+snc/log_unencrypted_rfc^ 2 ^ 2^N/A
+csi/enable^ 1 ^N/A^N/A
+csi/SAP/csa_lib^ $(DIR_EXECUTABLE)$(DIR_SEP)$(FT_DLL_PREFIX)sapcsa$(FT_DLL) ^N/A^N/A
+icm/HTTPS/forward_ccert_as_header^ TRUE ^N/A^N/A
+is/HTTP/show_detailed_errors^ FALSE ^N/A^ FALSE
+is/HTTP/show_server_header^ FALSE ^N/A^N/A
+icm/trace_secured_data^ FALSE ^N/A^N/A
+icm/accept_remote_trace_level^ FALSE ^N/A^N/A
+ssl/ciphersuites^ 903:PFS:HIGH:+eAES128:+kRSA:!aNULL:!eNULL:!eRC2:!eRC4:!eDES:!e3DES:!eAES_CBC:!mMD5:!mSHA1:TLS_FALLBACK_SCSV::EC_X25519:EC_HIGH:+EC_OPT ^N/A^N/A
+ssl/client_ciphersuites^ 918:PFS:HIGH:+eAES128:+kRSA:!aNULL:!eNULL:!eRC2:!eRC4:!eDES:!e3DES:!eAES_CBC:!mMD5:!mSHA1::EC_X25519:EC_HIGH:+EC_OPT ^N/A^N/A
+icm/HTTP/logging_0^ PREFIX ^N/A^N/A
+icm/server_port_0^ PROT ^N/A^ PROT
+icm/HTTP/admin_0^ PREFIX ^N/A^N/A
+icm/HTTPS/verify_client^ 0 ^N/A^ 0
+icm/ssl_config_0^ CRED ^N/A^N/A
+icm/HTTP/auth_0^ PREFIX ^N/A^N/A
+icm/security_log^ LOGFILE ^N/A^ LOGFILE
+icm/HTTP/mod_0^ PREFIX ^N/A^N/A
+END
+Oracle
+Parameter^ Recommended^ DEF^ INST
+os_roles^ FALSE ^FALSE
+remote_os_roles^ FALSE ^FALSE
+sec_max_failed_login_attempts^ Must be set to 5 ^5
+Password^ can set to any of in the comment ^N/A
+audit_trail^ XML or XML EXTENDED ^XML
+audit_file_dest^ <new File_System>10GB ^/oracle/V01/saptrace/audit
+audit_sys_operations^ TRUE ^TRUE
+compatible^ Equal to DB Version ^19.0.0
+sql92_security^ FALSE in 12.1 Default True in 12.2 ^TRUE
+O7_DICTIONARY_ACCESSIBILITY^ Must be false depricate since 12.2 ^N/A
+max_enabled_roles^ 148 from 12.2 parameter is removed ^N/A
+utl_file_dir^ NULL from 12.2 parameter is depricated ^N/A
+sec_return_server_release_banner^ FALSE ^FALSE
+open_links^ must be set to 0recyclebin ^0
+max_dump_file_size^ 20000 ^20000
+END
+Hana
+Parameter^ Recommended^ DEF^ INST
+END
+Hostagent
+Parameter^ Recommended^ DEF^ INST
